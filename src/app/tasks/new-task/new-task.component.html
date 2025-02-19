@@ -8,6 +8,6 @@
     <textarea id="description" name="description" #description></textarea>
   </p>
   <p id="actions">
-    <button>Add Task</button>
+    <button (click)="onAddTask(title.value,description.value)">Add Task</button>
   </p>
 </form>
