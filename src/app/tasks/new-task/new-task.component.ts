@@ -12,12 +12,10 @@ import { TasksService } from '../tasks.service';
 export class NewTaskComponent {
   private formEl = viewChild<ElementRef<HTMLFormElement>>('form');
 
-  constructor(private taskService:TasksService){}
+  constructor(private taskService: TasksService) {}
 
   onAddTask(title: string, description: string) {
-    this.taskService.addTask({title,description})
+    this.taskService.addTask({ title, description });
     this.formEl()?.nativeElement.reset();
   }
-
- 
 }
